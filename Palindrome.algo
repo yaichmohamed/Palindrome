@@ -1,0 +1,27 @@
+function isPalindrome(word) {
+// Convert the word to lowercase
+word = word.toLowerCase();
+
+// Initialize the counters
+let i = 0;
+let j = word.length - 1;
+
+// Check for the stop condition
+if (word.length <= 1) {
+return true;
+}
+
+// Continue looping until the counters cross each other
+while (i < j) {
+// If the characters don't match, return false
+if (word[i] !== word[j]) {
+return false;
+}
+
+// Move the counters towards the middle
+i++;
+j--;
+}
+
+// If we've made it this far, the word is a palindrome
+return
